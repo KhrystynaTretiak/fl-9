@@ -1,0 +1,141 @@
+@media print{
+
+    @page{
+        margin-top: 1cm;
+    }
+    
+    h2.tm-section-title{
+        color: blue;    
+    }
+
+    .tm-main-content, .pad{
+        padding: 0px;
+        margin: 0px;
+    }
+      
+    .tm-banner{
+        display: block;
+        height: 200px;              
+    }
+        
+    .flex-2-col{
+        flex-direction: column;
+        padding: 0;      
+    }
+  
+    .tm-sidebar, section.heading, section.blocks, section#ideas, section.tm-content-box, div#about{
+        display: none;
+    }  
+}
+
+@media screen{
+    
+    li a img{
+        border-radius: 50%;
+    }
+
+    ul li h2.tm-section-title:hover{
+        background-color: #66a3ff;
+        color: white;
+        font-weight: bold;
+    }
+
+    p::first-letter{
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    section.heading h2{
+        color: #66a3ff;
+        text-align: center;
+    }
+
+    .tm-sidebar, .tm-content-box {
+        box-shadow:  0 0 10px #000000;
+    }
+
+    section::before, div#home::before{
+        content: '';
+        height: 0px;
+        width: 0px;
+        border-top: 18px solid #66a3ff; 
+        border-right: 100px solid transparent; 
+        font-size: 0;
+        line-height: 0;
+    }
+
+    div.active h2.tm-section-title{
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    h2 + p {
+        font-style: italic;
+    }
+
+    div.active h2 ~p {
+        text-indent: 20px;
+    }
+
+    div.tm-team-description-container h2 ~p {
+        text-indent: 20px;
+        line-height: 200%;
+    }
+
+    ol li a{
+        color: #000;
+    }
+
+    ol li a:visited{
+        color: silver;
+    }
+
+    ol li a:hover{
+        color: #66a3ff;
+        text-decoration: underline;
+    }
+
+    ol li a.text::after{
+        content: ' New';
+        color: red;
+        position: relative; 
+        top: -0.5em; 
+        font-size: 80%;
+    }
+
+    li.box h2 ~ p::first-letter{
+        color: #000;
+    }
+
+    section.blocks ul.boxes li:nth-child(odd){
+        background-color:#ebebe0;
+    }
+
+    nav ul li:nth-child(odd),nav ul li:nth-child(2) {
+        border: silver;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: dotted;
+        border-left-style: none;
+
+    }
+ 
+    input[type='text'], input[type='email']{
+        color: red;
+    }
+
+    div.mandatory-field::after{
+        content: "*";
+        color: red;
+    }
+    
+    button[type='submit'] {
+        color: red;
+    }
+
+    button[type='submit']:hover{
+        background-color:  #66a3ff;
+        color: white;
+    }
+
+}
