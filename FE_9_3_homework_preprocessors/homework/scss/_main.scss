@@ -1,0 +1,166 @@
+body{
+    background: $contentBackground;
+    font-family: $fontStack;
+    color: $fontColor;
+}
+
+.main-wrapper{
+    width: 960px;
+    margin: 0 auto;  
+}
+
+.post-list{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 10px;
+}
+
+article{
+    background: $articleBackground;
+    padding: 15px;
+    margin: 10px;
+       
+    &:nth-child(2){
+        height:80%;
+    }
+    &:nth-child(4){
+        height:85%;
+    }
+    &:nth-child(odd){
+        margin-left: 0px;
+    }
+    &:nth-child(even){
+        margin-right: 0px;
+          
+    }
+    img{
+        width: 440px;
+    }
+    div{
+        width: 440px;
+        .post-description{
+            color: $postDescriptionColor;
+            font-size: 14px;
+        }
+        h3{
+            padding-top: 5px;
+            margin: 10px auto 0;
+            color: $postHeadColor;
+            border-top: 1px solid;
+            border-color: $postBorderColor;
+            text-transform: uppercase;
+        }
+        p{
+            margin-top: 5px;
+            color: $postTextColor;
+        }
+    }   
+}
+
+.logo{
+    img{
+    width: 350px;
+    height: 250px;
+    }  
+}
+
+header{
+    flex-flow:row wrap;
+    display: flex;  
+}
+
+nav{
+    margin:160px auto 39px; 
+    padding: 15px;
+    border: 0.7px solid;
+    border-color: $postBorderColor;
+    border-left: hidden;
+    border-right: hidden;
+
+    a{
+        padding: 65px;
+        color: $headColor;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover{
+            color: $fontColor;
+            text-decoration: underline;
+        }
+    }  
+}
+
+.toolbar{
+    margin-left: 760px;
+    padding: 10px;
+    width: 200px;
+
+    input{
+        font-weight: bold;
+        padding: 10px;
+        border: 0.5px solid;
+        border-color: $headColor;
+        background-color: $contentBackground;
+
+        &::-webkit-input-placeholder{
+            color: $headColor;
+        }
+    }
+}
+
+.contact-form{
+    h1,h4{
+        text-align: right;
+        color: $headColor;
+    }
+    h4{
+        margin-top: 0px;
+        text-transform: uppercase;
+    }
+    h1{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    form{
+        color: $headColor;
+    
+        input, textarea{
+            width: 936px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 0.7px solid;
+            border-color: $postBorderColor;
+            background-color: $contentBackground;  
+        }
+
+        button{
+            width: 200px;
+            height: 35px;
+            border: none;
+            margin: 10px 0 10px 760px;
+            color: #fff;
+            background-color: $headColor;
+
+            &:hover{
+                background-color:lighten($headColor,5%);
+            }
+        }
+    }
+}
+
+
+.about{
+    h1{
+        text-align: right;
+        color: $headColor;
+        text-transform: uppercase;
+    }
+    p{
+        color: $fontColor;
+    }
+    img{
+        width: 960px;
+    }  
+}
+
+

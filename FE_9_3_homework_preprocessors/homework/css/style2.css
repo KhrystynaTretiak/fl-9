@@ -1,0 +1,117 @@
+body {
+  background: #efefef;
+  font-family: "Times New Roman", Times, serif;
+  color: #757575; }
+
+.main-wrapper {
+  width: 960px;
+  margin: 0 auto; }
+
+.post-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10px; }
+
+article {
+  background: #fff;
+  padding: 15px;
+  margin: 10px; }
+  article:nth-child(2) {
+    height: 80%; }
+  article:nth-child(4) {
+    height: 85%; }
+  article:nth-child(odd) {
+    margin-left: 0px; }
+  article:nth-child(even) {
+    margin-right: 0px; }
+  article img {
+    width: 440px; }
+  article div {
+    width: 440px; }
+    article div .post-description {
+      color: #bdbdbd;
+      font-size: 14px; }
+    article div h3 {
+      padding-top: 5px;
+      margin: 10px auto 0;
+      color: #617d8a;
+      border-top: 1px solid;
+      border-color: #cfd8dc;
+      text-transform: uppercase; }
+    article div p {
+      margin-top: 5px;
+      color: #757575; }
+
+.logo img {
+  width: 350px;
+  height: 250px; }
+
+header {
+  flex-flow: row wrap;
+  display: flex; }
+
+nav {
+  margin: 160px auto 39px;
+  padding: 15px;
+  border: 0.7px solid;
+  border-color: #cfd8dc;
+  border-left: hidden;
+  border-right: hidden; }
+  nav a {
+    padding: 65px;
+    color: #fc5830;
+    text-transform: uppercase;
+    text-decoration: none; }
+    nav a:hover {
+      color: #757575;
+      text-decoration: underline; }
+
+.toolbar {
+  margin-left: 760px;
+  padding: 10px;
+  width: 200px; }
+  .toolbar input {
+    font-weight: bold;
+    padding: 10px;
+    border: 0.5px solid;
+    border-color: #fc5830;
+    background-color: #efefef; }
+    .toolbar input::-webkit-input-placeholder {
+      color: #fc5830; }
+
+.contact-form h1, .contact-form h4 {
+  text-align: right;
+  color: #fc5830; }
+.contact-form h4 {
+  margin-top: 0px;
+  text-transform: uppercase; }
+.contact-form h1 {
+  margin-top: 50px;
+  margin-bottom: 0px; }
+.contact-form form {
+  color: #fc5830; }
+  .contact-form form input, .contact-form form textarea {
+    width: 936px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 0.7px solid;
+    border-color: #cfd8dc;
+    background-color: #efefef; }
+  .contact-form form button {
+    width: 200px;
+    height: 35px;
+    border: none;
+    margin: 10px 0 10px 760px;
+    color: #fff;
+    background-color: #fc5830; }
+    .contact-form form button:hover {
+      background-color: #fc6c49; }
+
+.about h1 {
+  text-align: right;
+  color: #fc5830;
+  text-transform: uppercase; }
+.about p {
+  color: #757575; }
+.about img {
+  width: 960px; }
