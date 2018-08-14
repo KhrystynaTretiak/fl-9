@@ -1,0 +1,195 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0a1223;
+  --bg-color--light: #fff;
+  --link: #5d5d5d;
+  --link--active: #54597d;
+  --link--hover: #54597d;
+  --article-title: #ddd;
+  --article-title--dark: #000;
+  --thumbnail--description: #5d5d5d; */
+
+  /* These styles are needed only for media query max-width: 575px */
+
+  /* The 'Up' button (circle button at right bottom corner) */
+  /* --btn-color: #fff ;
+  --btn-bg-color: #5ebcff;
+
+  --navigation-border-bottom: #ddd;
+  --thumbnail-title: #484747;
+} */
+
+body{
+  background-color: #0a1223;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content{
+  display: grid;
+  grid-row-gap: 15px;
+}
+
+h1, h2{
+  color:#ddd;
+}
+
+h1{
+  text-align: center;
+  font-size: 5.0em;
+  margin: 100px auto;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  color: #5d5d5d;
+  font-size: 1.5em;
+  text-align: justify;
+  text-indent: 40px;
+}
+
+img{
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+header{
+  display: flex;
+}
+
+ a{
+  text-decoration: none;
+  color: #5d5d5d;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+ a:active{
+  color: #54597d;
+}
+
+ a:hover{
+  color: #54597d;
+}
+
+
+@media screen and (min-width:992px){
+  
+  article{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+    margin: auto 150px;
+  }
+
+  article:nth-child(even) div:nth-child(odd) {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  article:nth-child(even) div:nth-child(even) {
+      grid-column: 1;
+      grid-row: 1;
+  } 
+
+  header{
+    justify-content: flex-end;
+  }
+
+  a{
+    margin-top: 10px;
+  }
+
+  h2 {
+     background: linear-gradient(to right, #fff 0%, #000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .up{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:991px){
+
+  article{
+    margin: auto 100px;
+  }
+  
+  header{
+    justify-content: center;
+  }
+
+  .up{
+    display: none;
+  }
+
+  h2 {
+    background: linear-gradient(to right, #fff 0%, #000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media screen and (max-width:575px){
+
+  body{
+    background-color: #fff;
+  }
+
+  article{
+    margin: auto 45px;
+  }
+
+  h1{
+    color: #000;
+  }
+
+  h2{
+    color: #5d5d5d;
+    background: linear-gradient(to right, #5d5d5d 0%, #5d5d5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+  header{
+    justify-content: flex-start;
+  }
+  
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+
+   a{
+    font-size: 2.1em;
+    border-bottom: 2px solid;
+    border-color: #ddd;
+  }
+
+  a:hover{
+    font-weight: bold;
+  }
+
+  .up{
+    font-size: 1.6em;
+    display: inline;
+    position: fixed;
+    padding: 20px;
+    background-color: #5ebcff;
+    border-radius: 50%;
+    color: #fff;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 5px 5px 10px #ddd;
+  }
+}
