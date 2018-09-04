@@ -1,0 +1,42 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+#root{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+footer{
+    display: grid;
+}
+img{
+    align-self: end;
+    justify-self: center;
+}
+.forInput{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+input{
+    margin-left: 10px;
+    color: #aaa2a2;
+} 
+.addNewItems{
+    margin-left: 10px;
+    cursor: default;
+}
+.forNewItem{
+    border-top: 2px solid #000;
+    width: 95%;
+    margin: 15px;
+}
+p{
+    margin: 0%;
+    align-self: center;
+}
+.forOne{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    cursor: pointer;
+}
