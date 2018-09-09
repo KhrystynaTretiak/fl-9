@@ -1,0 +1,39 @@
+#root{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.todo, .add, .modify{
+    display: grid;
+}
+.todo h1, .add h1, .modify h1 {
+    justify-self: center;
+}
+.todo button {
+    justify-self: center;
+}
+.forItem{
+    margin-top: 25px;
+}
+.forOneItem{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+}
+.add input, .modify input{
+    width: 20%;
+    font-size: 1.3em;
+    padding: 5px;
+    justify-self: center;
+}
+.addCanc, .modifyCanc{
+    margin-left: 29%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+
+button{
+    width: 15%;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5%;
+}
