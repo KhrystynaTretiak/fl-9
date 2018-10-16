@@ -1,0 +1,104 @@
+img {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    grid-row-gap: 35px;
+    z-index: 2;
+}
+
+.addMore {
+    text-align: center;
+    color: #0505da;
+    grid-column: 2;
+}
+
+.allPopUp {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(113, 111, 111, 0.5);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.infoPopUp {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #ffffff;
+    width: 800px;
+    height: 500px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    justify-self: end;
+}
+
+.followText {
+    display: inline;
+    justify-self: center;
+}
+
+.follow {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 0.5%;
+    align-items: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    z-index: 50;
+    background: url(../img/icons.png) no-repeat;
+}
+
+.prev {
+    left: 120px;
+    background-position: -37px -26px;
+}
+
+.next {
+    right: 120px;
+    background-position: 20px -26px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: #ffffff;
+    font-weight: 900; 
+}
+
+.hover{
+    position: absolute;
+    z-index: 30;
+    top: 10px;
+    
+}
+.like{
+    background: url(../img/icons.png) no-repeat;
+    background-position: 8px 0px;
+}
+.comment{
+    background: url(../img/icons.png) no-repeat;
+    background-position: -20px 0;
+}
