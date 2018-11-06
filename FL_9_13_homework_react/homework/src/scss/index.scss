@@ -1,0 +1,18 @@
+// Common
+@import 'material-icons'; // self hosted material icons
+
+.player{
+    background-color: rgb(228, 220, 220);
+    display: grid;
+    grid-template-columns: 40px 40px auto 40px;
+    margin: 10px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
