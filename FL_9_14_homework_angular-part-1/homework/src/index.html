@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 14</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>POSTS WALL</h1>
+    <div ng-controller="ctrl2">
+        <input class="search" type="text" ng-model="query.title" placeholder="Search by title...">
+
+        <div class="post" ng-repeat="user in userPosts | filter: query" ng-if="$index > 0">
+            <div class="author">
+                <img class="photo" src={{user.photo}} alt="photo">
+                <p>{{user.name}}</p>
+            </div>
+            <h3>{{user.title}}</h3>
+            <p>{{user.message}}</p>
+            <span id={{user.id}} ng-click="like($event)" class="like"> &#9829; </span>
+            <span>{{user.like}}</span>
+            <button ng-click="editPost()" ng-show={{user.edit}}>Edit</button>
+
+        </div>
+    </div>
+
+    <div ng-controller="ctrl2">
+        <div ng-show="showInput" class="post">
+            <div class="author">
+                <img class="photo" src={{userPosts[0].photo}} alt="photo">
+                <p>{{userPosts[0].name}}</p>
+            </div>
+            <input class="new-post" ng-model="addTitle" type="text"> <br>
+            <textarea class="new-post" ng-model="addMessage" name="" id="" cols="30" rows="5"></textarea>
+            <br>
+            <button ng-click="savePost()">Save</button>
+            <button ng-click="cancel()">Cancel</button>
+        </div>
+        <button class="add-button" ng-click="show()">Add new post</button>
+    </div>
+
+    <div ng-controller="ctrl2">
+        <div ng-if="showEdit" class="post">
+            <div class="author">
+                <img class="photo" src={{userPosts[0].photo}} alt="photo">
+                <p>{{userPosts[0].name}}</p>
+            </div>
+            <input ng-model="addTitle" type="text"> <br>
+            <textarea ng-model="addMessage" name="" id="" cols="30" rows="5"></textarea>
+            <span class="liked"> &#9829; </span>
+            <span>{{user.like}}</span>
+            <button ng-click="savePost()">Save</button>
+            <button ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="app/app.constants.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+</body>
+
+</html>
