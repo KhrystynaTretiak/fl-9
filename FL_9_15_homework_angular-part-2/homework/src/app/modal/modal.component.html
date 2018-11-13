@@ -1,0 +1,33 @@
+<form class="input-form">
+  <div class="input-div">
+    <label>Topic </label>
+    <input name="topic" [(ngModel)]="lesson.topic" type="text">
+
+  </div>
+  <div class="input-div">
+    <label>Date </label>
+    <input name="date" [(ngModel)]="lesson.date" type="text">
+
+  </div>
+  <div class="input-div">
+    <label>Lecturer </label>
+    <input name="lecturer" [(ngModel)]="lesson.lecturer" type="text">
+
+  </div>
+</form>
+<button class="form-button" routerLink="/modal" (click)="addLesson()">Add to the list</button>
+<button class="form-button" routerLink="/lesson">Close modal</button>
+
+
+<table>
+  <tr>
+    <th>Topic</th>
+    <th>Date</th>
+    <th>Lecturer</th>
+  </tr>
+  <tr *ngFor="let l of lessons">
+    <td>{{l.topic}}</td>
+    <td>{{l.date}}</td>
+    <td>{{l.lecturer}}</td>
+  </tr>
+</table>
